@@ -8,4 +8,6 @@
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
+    width: 150px;
+    border: 1;
 }

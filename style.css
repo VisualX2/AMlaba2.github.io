@@ -1,0 +1,11 @@
+#container {
+    width: 100%;
+
+}
+
+#multichat {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}

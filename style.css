@@ -6,11 +6,14 @@
 #sidemultichat {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-around;
     align-items: stretch;
     width: 150px;
     border: 1;
     padding: 5px;
+    
+}
+#laba_href {
     border: solid 1px black;
 }
 #chat1 {

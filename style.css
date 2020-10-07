@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: "Prim83";
-    src: url("/fonts/prim83.ttf") format("ttf");
+    src: url(/fonts/prim83.ttf);
 }
 #chat1 {
     

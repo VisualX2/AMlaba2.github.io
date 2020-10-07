@@ -8,13 +8,17 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
-    
+    font-family: ;
     
     padding: 5px;
     
 }
 #laba_href {
     border: solid 1px black;
+}
+@font-face {
+    font-family: "Prim83";
+    src: url("/fonts/prim83.ttf") format("ttf");
 }
 #chat1 {
     

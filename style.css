@@ -20,9 +20,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border: solid 1px black;
-
+    font-family: Arial;
 }
+    
+
 @font-face {
     font-family: "Prim83";
     src: url(/fonts/prim83.ttf);

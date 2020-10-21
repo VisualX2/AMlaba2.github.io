@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+    <title>Laba2</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let numberChat = 1;
+        let messageList = document.getElementById("text");
+    </script>
+    <div id="container">
+        <div id = "laba_menu">
+        <p id = "chat1">Чат 1</p>
+        <script>
+            document.getElementById("chat1").addEventListener("click", function(event){
+                numberChat = 1;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat2">Чат 2</p>
+        <script>
+            document.getElementById("chat2").addEventListener("click", function(event){
+                numberChat = 2;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat3">Чат 3</p>
+        <script>
+            document.getElementById("chat3").addEventListener("click", function(event){
+                numberChat = 3;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat4">Чат 4</p>
+        <script>
+            document.getElementById("chat4").addEventListener("click", function(event){
+                numberChat = 4;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat5">Чат 5</p>
+        <script>
+            document.getElementById("chat5").addEventListener("click", function(event){
+                numberChat = 5;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat6">Чат 6</p>
+        <script>
+            document.getElementById("chat6").addEventListener("click", function(event){
+                numberChat = 6;
+                reloadMessages(numberChat);
+            });
+        </script>
+        <p id = "chat7">Чат 7</p>
+        <script>
+            document.getElementById("chat7").addEventListener("click", function(event){
+                numberChat = 7;
+                reloadMessages(numberChat);
+            });
+        </script>
+        </div>
+        <div id="text">
+        </div>
+            <div id = "textTyping">
+                <form>
+                    <input type="text" id = "first" name="first" placeholder="Написать от имени первого">
+                    <script>
+                        
+                        
+                        let messageFirst = document.getElementById("first");
+                        messageFirst.addEventListener("keyup", function(event){
+                            if(event.keyCode === 13) {
+                                let d = new Date();
+                                let minutes = d.getMinutes();
+                                let formattedNumber;
+                                    if(d.getMinutes() < 9){
+                                    formattedNumber = ("0" + minutes).slice(-2)
+                                }
+                                else {
+                                    formattedNumber = minutes;
+                                }
+                                addMessageToStorage("First", messageFirst.value, d.getHours() + ":" + formattedNumber,numberChat );
+                                reloadMessages(numberChat);
+                            }
+                        });
+                        function reloadMessages(chatNumber){
+                            document.getElementById("text").innerHTML = "";
+                            
+                            loadFromStorage(chatNumber);
+                        }
+                        window.onload = loadFromStorage(numberChat);
+                        function addMessageToStorage(name, text, time,chatNumber) {
+                            let messages = JSON.parse(localStorage.getItem('allMessages'+chatNumber)) || [];
+                            messages.push({name: name, text: text, time: time});
+                            localStorage.setItem('allMessages'+chatNumber, JSON.stringify(messages));
+                        }
+                        function loadFromStorage(chatNumber){
+                            let messages = JSON.parse(localStorage.getItem('allMessages'+chatNumber)) || [];
+                            messages.forEach(element => {
+                                let newMessage = document.createElement("p");
+                                let setId = document.createAttribute("id");
+                                setId.value = "messageFirst";
+                                if(element.name === "First"){
+                                    setId.value = "messageFirst";
+                                }
+                                else{
+                                    setId.value = "messageSecond";
+                                }
+                                newMessage.setAttributeNode(setId);
+
+                                let messageList = document.getElementById("text");
+
+                                let textForMessage = document.createElement("p");
+                                let setIdText = document.createAttribute("id");
+                                setIdText.value = "messageFirstText";
+                                textForMessage.setAttributeNode(setIdText);
+
+                                let textForWho = document.createElement("p");
+                                let setIdWho = document.createAttribute("id");
+                                setIdWho.value = "WhoText";
+                                textForWho.setAttributeNode(setIdWho);
+                            
+                                let textForTime = document.createElement("p");
+                                let setIdTime = document.createAttribute("id");
+                                setIdTime.value = "TimeText";
+                                textForTime.setAttributeNode(setIdTime);
+
+
+                                textForWho.innerHTML = element.name
+                                textForTime.innerHTML = element.time;
+                                textForMessage.innerHTML = element.text;
+                            
+                                messageList.appendChild(newMessage);
+                                newMessage.appendChild(textForWho);
+                                newMessage.appendChild(textForMessage);
+                                newMessage.appendChild(textForTime);
+                            });
+                        }
+                        
+
+                    </script>
+                    <input type="text" id = "second" name="second" placeholder="Написать от имени второго">
+                    <script>
+                        let messageList2 = document.getElementById("text");
+                        let messageSecond = document.getElementById("second");
+                        messageSecond.addEventListener("keyup", function(event){
+                            if(event.keyCode === 13) {
+                                let d = new Date();
+                                let minutes = d.getMinutes();
+                                let formattedNumber;
+                                    if(d.getMinutes() < 9){
+                                    formattedNumber = ("0" + minutes).slice(-2)
+                                }
+                                else {
+                                    formattedNumber = minutes;
+                                }
+                                addMessageToStorage("Second", messageSecond.value, d.getHours() + ":" + formattedNumber, numberChat );
+                                reloadMessages(numberChat);
+                            }
+                        });
+                        
+
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

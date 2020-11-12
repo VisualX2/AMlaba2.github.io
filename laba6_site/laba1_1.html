@@ -31,9 +31,13 @@
                     x[i].getElementsByTagName("HREF")[0].childNodes[0].nodeValue +
                     "\")>" +
                     x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-                    "</a>";
+                    "</a><div id = \""+ x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +"\"></div>";
                 }
                 document.getElementById("laba_menu").innerHTML = menu;
+            }
+            function loadAdditionalMenu(xml_file){
+                const xhr2 = new XMLHttpRequest();
+                const
             }
         </script>
         <div id="text">

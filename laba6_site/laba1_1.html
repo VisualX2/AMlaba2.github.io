@@ -24,15 +24,17 @@
             function loadMainMenu(xml){
                 let i;
                 let xmlDoc = xml.responseXML;
-                let menu;
+                let menu = "<ul>";
                 let x = xmlDoc.getElementsByTagName("PUNKT");
                 for (i = 0; i <x.length; i++) {
-                    menu += "<a href = Javascript:loadAdditionalMenu(\"" +
+                    menu += "<li><a href = Javascript:loadAdditionalMenu(\"" +
                     x[i].getElementsByTagName("HREF")[0].childNodes[0].nodeValue +
                     "\",\"" + x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue + "\")>" +
                     x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-                    "</a><div id = \""+ x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +"\"></div>";
+                    "</a></li>";
+
                 }
+                menu += "</ul>";
                 document.getElementById("laba_menu").innerHTML = menu;
             }
             function loadAdditionalMenu(xml_file, id){

@@ -2,6 +2,9 @@
 <head>
     <title>Laba2</title>
     <link rel = "stylesheet" href="style.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
 </head>
 <body>
     
@@ -9,6 +12,7 @@
         <div id = "laba_menu">
         
         </div>
+
         <script>
             const xhr = new XMLHttpRequest();
             const laba_menu = document.getElementById('laba_menu');
@@ -76,4 +80,9 @@
             </div>
         </div>
     </div>
+    <script>
+        $( function() {
+          $( "#laba_menu" ).draggable();
+        } );
+        </script>
 </body>

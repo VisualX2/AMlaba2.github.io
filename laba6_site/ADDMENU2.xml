@@ -14,4 +14,9 @@
         <ID>ThirdPunkt</ID>
         <HREF>ADDMENU3.XML</HREF>
     </PUNKT>
+    <PUNKT>
+        <NAME>Back</NAME>
+        <ID>ThirdPunkt</ID>
+        <HREF>main_menu.xml</HREF>
+    </PUNKT>
 </MAINMENU>

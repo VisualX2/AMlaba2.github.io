@@ -9,7 +9,7 @@
 <body>
     
     <div id="container">
-        <div id = "laba_menu">
+        <div id = "laba_menu" title = "menu">
         
         </div>
 
@@ -81,11 +81,39 @@
         </div>
     </div>
     <script>
+            $( function() {
+            $( "#laba_menu" ).draggable();
+                
+            } );
+            $( document ).tooltip();
         $( function() {
-          $( "#laba_menu" ).draggable();
+
+            function runEffect() {
+
+            var selectedEffect = $( "shake" ).val();
+        
+            var options = {};
+
+        
+            $( "#laba_menu" ).effect( selectedEffect, options, 500, callback );
+            };
+        
+            function callback() {
+            setTimeout(function() {
+                $( "#laba_menu" ).removeAttr( "style" ).hide().fadeIn();
+            }, 1000 );
+            };
+ 
+            $( "#laba_menu" ).on( "click", function() {
+                runEffect();
+             return false;
+            });
         } );
         </script>
-        <script>
-            
-            </script>
+        <style>
+            label {
+              display: inline-block;
+              width: 5em;
+            }
+        </style>
 </body>

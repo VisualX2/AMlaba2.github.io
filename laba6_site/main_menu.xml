@@ -22,6 +22,6 @@
     <PUNKT>
         <NAME>Name 5</NAME>
         <ID>FifthPunkt</ID>
-        <HREF>ADDMENU5.XML</HREF>
+        <HREF>ADDMENU5.xml</HREF>
     </PUNKT>
 </MAINMENU>

@@ -149,12 +149,11 @@
                                 let d = new Date();
                                 let minutes = d.getMinutes();
                                 let formattedNumber;
-                                    if(d.getMinutes() < 9){
-                                    formattedNumber = ("0" + minutes).slice(-2)
-                                }
-                                else {
-                                    formattedNumber = minutes;
-                                }
+                                
+                                
+                                    formattedNumber = ("0" + minutes).slice(-2);
+                                
+                                
                                 addMessageToStorage("Second", messageSecond.value, d.getHours() + ":" + formattedNumber, numberChat );
                                 reloadMessages(numberChat);
                             }

@@ -1,0 +1,33 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 960px;
+}
+#updown {
+width: 80%;
+height: 100px;
+background-color: royalblue;
+}
+
+#center_p {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    width: 80%;
+    
+}
+#center {
+    height: 100%;
+    background-color: #FFFFFF;
+    flex-grow: 2;
+}
+
+#leftright {
+    height: 100%;
+    width: 200px;
+    background-color: yellow;
+}

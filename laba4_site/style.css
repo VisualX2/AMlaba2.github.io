@@ -52,7 +52,7 @@
     
     margin-left: 420px;
     padding-top:20px;
-    width: 1400px;
+    width: 600px;
 }
 #text h1{
     text-align: center;
@@ -71,13 +71,4 @@
 }
 #text tr{
     font-family: Arial;
-}
-
-.tooltip {
-    position: fixed;
-    padding: 10px 20px;
-    border: 1px solid #4b91d1;
-    text-align: center;
-    font-family: Arial;
-    background: white;
 }

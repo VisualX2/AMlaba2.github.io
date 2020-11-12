@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <title>Laba2</title>
+    <link rel = "stylesheet" href="style.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    
+  
+</head>
+<body>
+    
+    <div id="container">
+        <div id = "laba_menu">
+        <a href="elements.html" id = "chat1">Elements</a>
+        
+        <a href="gallery.html" id = "chat2">Gallery</a>
+        <a href="slider.html" id = "chat2">Slider</a>
+        <a href="informer.html" id = "chat2">Informers</a>
+        </div>
+        <div id="text">
+            <p>Елемент Accordion</p>
+            <div id="accordion">
+                
+                <h3>Accordion</h3>
+                <div>
+                    <p>
+                        Text1
+                    </p>
+                </div>
+                <h3>Accordion2</h3>
+                <div>
+                    <p>
+                        Text2
+                    </p>
+                </div>
+                <h3>Accordion3</h3>
+                <div>
+                    <p>
+                        Text3
+                    </p>
+                </div>
+            </div>
+            <p>Елемент Datepicker</p>
+            <p>Дата: <input type="text" id="datepicker"></p>
+            <p>Елемент menu</p>
+            <style>
+                .ui-menu { width: 150px; }
+            </style>
+            <ul id="menu">
+                <li><div>One</div></li>
+                <li><div>Two</div></li>
+                <li><div>Three</div>
+                  <ul>
+                    <li><div>Three-One</div></li>
+                    <li><div>Three-Two</div></li>
+                  </ul>
+                </li>
+              </ul>
+            <p>Елемент Slider</p>
+            <style>
+                #custom-handle {
+                  width: 2em;
+                  height: 1.6em;
+                  top: 50%;
+                  margin-top: -.8em;
+                  text-align: center;
+                  line-height: 1.6em;
+                }
+            </style>
+            <div id="slider">
+                <div id="custom-handle" class="ui-slider-handle"></div>
+            </div>
+            <p>Елемент Tabs</p>
+            <div id="tabs">
+                <ul>
+                  <li><a href="#tabs-1">Tab1</a></li>
+                  <li><a href="#tabs-2">Tab2</a></li>
+                  <li><a href="#tabs-3">Tab3</a></li>
+                </ul>
+                <div id="tabs-1">
+                  <p>Text1</p>
+                </div>
+                <div id="tabs-2">
+                  <p>Text2</p>
+                </div>
+                <div id="tabs-3">
+                  <p>Text3</p>
+
+                </div>
+              </div>
+              <p title = "Tooltip1">Елемент Tooltip</p>
+              <style>
+                label {
+                  display: inline-block;
+                  width: 5em;
+                }
+              </style>
+        </div>
+        
+            <div id = "textTyping">
+                
+            </div>
+        </div>
+        <script>
+            $("#accordion").accordion();
+            $( "#datepicker" ).datepicker();
+            $( "#menu" ).menu();
+            $( function() {
+                var handle = $( "#custom-handle" );
+                $( "#slider" ).slider({
+                    max: 50,
+                    create: function() {
+                        handle.text( $( this ).slider( "value" ) );
+                    },
+                    slide: function( event, ui ) {
+                        handle.text( ui.value );
+                    }
+                });
+            } );
+            $( "#tabs" ).tabs();
+            $( document ).tooltip();
+        </script>
+</body>

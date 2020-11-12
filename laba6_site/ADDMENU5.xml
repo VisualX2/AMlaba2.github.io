@@ -1,16 +1,16 @@
 <MAINMENU>
     <PUNKT>
-        <NAME>Name _1</NAME>
+        <NAME>Name 5_1</NAME>
         <ID>FirstPunkt</ID>
         <HREF>ADDMENU1.XML</HREF>
     </PUNKT>
     <PUNKT>
-        <NAME>Name 2_2</NAME>
+        <NAME>Name 5_2</NAME>
         <ID>SecondPunkt</ID>
         <HREF>ADDMENU2.xml</HREF>
     </PUNKT>
     <PUNKT>
-        <NAME>Name 2_3</NAME>
+        <NAME>Name 5_3</NAME>
         <ID>ThirdPunkt</ID>
         <HREF>ADDMENU3.xml</HREF>
     </PUNKT>

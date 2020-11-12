@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Laba2</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container">
+        <div id = "laba_menu">
+        
+        </div>
+        <script>
+            const xhr = new XMLHttpRequest();
+            const laba_menu = document.getElementById('laba_menu');
+
+            xhr.onload = function() {
+                if (this.readyState == 4 && this.status == 200){
+                    loadMainMenu(this);
+                }
+            };
+            xhr.open("GET", "main_menu.xml",true);
+            xhr.send();
+
+            function loadMainMenu(xml){
+                let i;
+                let xmlDoc = xml.responseXML;
+                let menu;
+                let x = xmlDoc.getElementsByTagName("PUNKT");
+                for (i = 0; i <x.length; i++) {
+                    menu += "<a href = Javascript:loadAdditionalMenu(\"" +
+                    x[i].getElementsByTagName("HREF")[0].childNodes[0].nodeValue +
+                    "\")>" +
+                    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+                    "</a>";
+                }
+                document.getElementById("laba_menu").innerHTML = menu;
+            }
+        </script>
+        <div id="text">
+            
+        </div>
+            <div id = "textTyping">
+                <form>
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

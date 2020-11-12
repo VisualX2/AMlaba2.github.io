@@ -1,0 +1,27 @@
+<MAINMENU>
+    <PUNKT>
+        <NAME>Name 1</NAME>
+        <ID>FirstPunkt</ID>
+        <HREF>ADDMENU1.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 2</NAME>
+        <ID>SecondPunkt</ID>
+        <HREF>ADDMENU2.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 3</NAME>
+        <ID>ThirdPunkt</ID>
+        <HREF>ADDMENU3.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 4</NAME>
+        <ID>FourthPunkt</ID>
+        <HREF>ADDMENU4.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 5</NAME>
+        <ID>FifthPunkt</ID>
+        <HREF>ADDMENU5.XML</HREF>
+    </PUNKT>
+</MAINMENU>

@@ -2,12 +2,12 @@
     <PUNKT>
         <NAME>Name 1</NAME>
         <ID>FirstPunkt</ID>
-        <HREF>ADDMENU1.XML</HREF>
+        <HREF>ADDMENU1.xml</HREF>
     </PUNKT>
     <PUNKT>
         <NAME>Name 2</NAME>
         <ID>SecondPunkt</ID>
-        <HREF>ADDMENU2.XML</HREF>
+        <HREF>ADDMENU2.xml</HREF>
     </PUNKT>
     <PUNKT>
         <NAME>Name 3</NAME>

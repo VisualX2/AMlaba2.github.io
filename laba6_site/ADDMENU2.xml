@@ -1,0 +1,17 @@
+<MAINMENU>
+    <PUNKT>
+        <NAME>Name 2_1</NAME>
+        <ID>FirstPunkt</ID>
+        <HREF>ADDMENU1.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 2_2</NAME>
+        <ID>SecondPunkt</ID>
+        <HREF>ADDMENU2.XML</HREF>
+    </PUNKT>
+    <PUNKT>
+        <NAME>Name 2_3</NAME>
+        <ID>ThirdPunkt</ID>
+        <HREF>ADDMENU3.XML</HREF>
+    </PUNKT>
+</MAINMENU>

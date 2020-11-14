@@ -1,0 +1,92 @@
+html{
+    height: 100%;
+}
+body {
+    margin: 0px;
+    background-color: rgb(97, 97, 97);
+    height: 100%;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 100%;
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(97, 97, 97);
+}
+
+#menu a {
+    padding: 8px 8px 8px 8px;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+    display: block;
+    font-family: Prim83;
+    border: 1px solid rgb(202, 202, 202);
+}
+#content{
+    background-color: rgb(129, 129, 129);
+    min-width: calc(100% - 200px);
+    min-height: 100%;
+}
+#content h1 {
+    font-family: Prim83;
+    text-align: center;
+}
+#content p {
+    font-family: Arial;
+
+}
+@font-face {
+    font-family: "Prim83";
+    src: url(/fonts/prim83.ttf);
+}
+#searchform {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: Arial;
+    text-align: center;
+}
+#content img {
+    width: 100px;
+}
+#content table {
+
+    font-family: Arial;
+    text-align: center;
+}
+
+.mod {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 70px);
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    border: 1px solid rgb(97, 97, 97);
+}
+
+.mod p {
+
+    flex-grow: 2;
+    
+}
+
+.mod #gameicon {
+    top:0;
+    right:0;
+    bottom: 20px;
+    width: 50px;
+    cursor: pointer;
+}

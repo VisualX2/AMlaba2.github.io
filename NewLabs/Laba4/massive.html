@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Laba2</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input id = "number">
+        <input type = "button" value="Execute code!" onclick="Execute()">
+    </form>
+    <div id = "text"></div>
+    <script>
+        function Execute(){
+            let x = document.getElementById('text')
+            let array = generateArray() || [];
+
+            let a = document.createElement('p');
+            a.innerHTML = "Generated array: " + array.toString();
+            x.appendChild(a);
+
+            array = editArray(array) || [];
+            a = document.createElement('p');
+            a.innerHTML = "Min-First array: " + array.toString();
+            x.appendChild(a);
+            array = sortArray(array) || [];
+            a = document.createElement('p');
+            a.innerHTML = "Sorted array: " + array.toString();
+            x.appendChild(a);
+        }
+        function generateArray(){
+            let x = document.getElementById("number").value
+            
+            let array = []
+            
+            for(let i = 0; i < x; i++){
+                let a = Math.random();
+                
+                array.push(Math.round(a * 100)/100);
+            }
+            return array
+        }
+        function editArray(array){
+            let min = Math.min(...array);
+            let newArray = [];
+            newArray.push(min);
+
+            const index = array.indexOf(min);
+            if (index > -1) {
+                array.splice(index, 1);
+            }
+            newArray = newArray.concat(array);
+            return newArray
+        }
+        function sortArray(array){
+            
+        for(var i = 0; i < array.length; i++){
+
+            var min = i;
+            for(var j = i+1; j < array.length; j++){
+                if(array[j] < array[min]){
+                    min = j;
+                }
+            }
+            var temp = array[i];
+            array[i] = array[min];
+            array[min] = temp;
+        }
+        array.reverse();
+        return array;
+        
+        }
+    </script>
+</body>

@@ -100,3 +100,6 @@ body {
     width: 50px;
     cursor: pointer;
 }
+.tno_pic{
+    float: right;
+}

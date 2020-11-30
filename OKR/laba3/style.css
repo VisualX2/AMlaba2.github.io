@@ -2,6 +2,11 @@
     font-family: "Prim83";
     src: url("/fonts/prim83.ttf") format("ttf");
 }
+@media only screen{
+    .logo {
+        width: 300px;
+    }    
+}
 @media only screen and (min-width: 1920px){
     .logo {
         width: 300px;
@@ -9,6 +14,41 @@
     .menu-width {
         max-width: 1920px;
     };    
+}
+@media only screen and (min-width: 1920px){
+    .logo {
+        width: 300px;
+    }
+    .menu-width {
+        max-width: 1920px;
+    };    
+}
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+.parallaxed-bg{
+    max-width: 1920px;
+    background-image: url(images/bg-full.jpg);
+    min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px){
+    .logo{
+        width: 200px;
+    }
+    .parallaxed-bg{
+        background-image: url(images/bg-mobile.jpg);
+        min-height: 100%;
+        background-attachment: scroll;
+        
+    }
 }
 
 .menu {
@@ -20,6 +60,13 @@
 
 }
 
+header {
+    background-color: rgb(108, 158, 214);
+    box-shadow: 0 0 5px;
+}
+.menu{
+    background-color: #B1C5DD;
+}
 .menu a{
     color: black;
   text-decoration: none;
@@ -27,15 +74,17 @@
   padding: 8px 8px 8px 8px;
   
   background-image: linear-gradient(#222b40, #222b40),
-    linear-gradient(rgb(187, 176, 251), rgb(187, 176, 251)),
-    linear-gradient(#feb2b2, #feb2b2);
+    linear-gradient(rgb(255, 172, 117), rgb(255, 172, 117)),
+    linear-gradient(#ff5858, #ff5858);
   background-size: 20px 2px, 100% 2px, 0 2px;
   background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
+
 }
 .menu a:hover {
     background-size: 20px 2px, 0 2px, 100% 2px;
     background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
   }
-
+footer{
+    background-color: #2B4057;
+}

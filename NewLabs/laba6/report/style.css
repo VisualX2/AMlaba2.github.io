@@ -1,0 +1,83 @@
+#container {
+    width: 100%;
+}
+
+#sidemultichat {
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    font-family: Prim83;
+    border-bottom: 2px solid #adadad;
+    padding: 5px;
+    
+}
+
+#laba_href {
+    border: solid 1px black;
+    text-align: center;
+    color: rgb(121, 121, 121);
+    text-decoration: none;
+}
+#sidemultichat a:hover{
+    color: rgb(146, 144, 255);
+}
+#laba_menu {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    font-family: Arial;
+    overflow-x: hidden;
+    padding-top: 30px;
+
+}
+#laba_menu a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+
+  }   
+  #laba_menu a:hover {
+    color: #ff9ef7;
+  }
+@font-face {
+    font-family: "Prim83";
+    src: url(/fonts/prim83.ttf);
+}
+#text {
+    
+    margin-left: 420px;
+    padding-top:20px;
+    width: 1400px;
+}
+#text h1{
+    text-align: center;
+    font-family: Prim83;
+}
+#text p{
+    font-family: Arial;
+}
+#text table {
+    border: 1px, solid rgb(119, 243, 171);
+    border-spacing: 5px;
+}
+#text th{
+    font-family: Prim83;
+    
+}
+#text tr{
+    font-family: Arial;
+}
+
+.tooltip {
+    position: fixed;
+    padding: 10px 20px;
+    border: 1px solid #4b91d1;
+    text-align: center;
+    font-family: Arial;
+    background: white;
+}

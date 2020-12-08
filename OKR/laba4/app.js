@@ -34,4 +34,5 @@ function pageDetailed(lel){
   let needed = base[lel + 1];
   let uwu;
   uwu += `<div style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px;"><img src = '` + needed.images + `' class='d-block user-select-none' width='100%' height='200' aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'></div>`;
+  return uwu;
 }

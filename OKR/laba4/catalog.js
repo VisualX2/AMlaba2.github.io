@@ -1,4 +1,5 @@
-let base = JSON.parse(sessionStorage.getItem("productList"))||[]
+let base = JSON.parse(sessionStorage.getItem("productList"))||[];
+console.log(base);
 let catalog = `
 <h1>I am About Page.</h1>
 <div id = "owo">

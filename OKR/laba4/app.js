@@ -1,4 +1,4 @@
-let base = JSON.parse(sessionStorage.getItem("productList"))||[];
+
 
 const routes = {
   '#catalog' : catalog

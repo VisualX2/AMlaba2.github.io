@@ -15,7 +15,7 @@ function testABInt(string)
 }
 window.onpopstate = () => {
   if(testABInt(window.location.hash)){
-    rootDiv.innerHTML = pageDetailed(window.location.hash);
+    rootDiv.innerHTML = "<h1>dick</h1>";
   }
   else{
     rootDiv.innerHTML = routes[window.location.hash];

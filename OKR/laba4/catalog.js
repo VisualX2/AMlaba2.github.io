@@ -1,4 +1,4 @@
-import "./app.js";
+
 let catalog = `
 <h1>I am About Page.</h1>
 <div class = "jumbotron">

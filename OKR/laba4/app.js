@@ -29,7 +29,7 @@ async function getDataCatalog() {
 }
 
 function pageDetailed(lel){
-  lel = myString.replace(/\D/g,'');
+  lel = lel.replace(/\D/g,'');
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];
   let needed = base[lel - 1];
   let uwu;

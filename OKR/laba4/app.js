@@ -10,7 +10,7 @@ rootDiv.innerHTML = routes[window.location.hash];
 
 function testABInt(string)
 {
-    var match = string.match(/ab[0-9]$/);
+    var match = string.match(/[0-9]$/);
     console.log("cock");
     return match ? match[0] : '';
 }

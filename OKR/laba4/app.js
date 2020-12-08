@@ -10,8 +10,12 @@ rootDiv.innerHTML = routes[window.location.hash];
 
 
 window.onpopstate = () => {
-  rootDiv.innerHTML = routes[window.location.hash]
-  
+  if(window.location.hash.endsWith(/[0-9]$/)){
+    rootDiv.innerHTML = "DICK";
+  }
+  else{
+    rootDiv.innerHTML = routes[window.location.hash];
+  }
 }
 
 async function getDataCatalog() {

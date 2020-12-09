@@ -1,5 +1,5 @@
 import "./catalog.js";
-window.onload = getDataCatalog();
+getDataCatalog();
 
 const routes = {
   '#catalog' : catalog

@@ -1,4 +1,9 @@
 import "./fetch.js";
+async function getDataCatalog() {
+    let products = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/products").then(response => response.json());
+    products = JSON.stringify(products);
+    sessionStorage.setItem("productList", products);
+  }
 getDataCatalog();
 let base = JSON.parse(sessionStorage.getItem("productList"))||[];
 let catalog = `

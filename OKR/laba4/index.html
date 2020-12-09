@@ -4,7 +4,16 @@
         <title>Laba 3</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        
+        <script>
+          async function getDataCatalog() {
+              let products = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/products").then(response => response.json());
+              products = JSON.stringify(products);
+              sessionStorage.setItem("productList", products);
+          }
+          getDataCatalog();
+  
+  
+      </script>
         
         <script src="catalog.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">

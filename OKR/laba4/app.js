@@ -1,4 +1,4 @@
-import "./fetch.js";
+
 getDataCatalog();
 
 const routes = {

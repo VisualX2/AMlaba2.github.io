@@ -1,3 +1,4 @@
+import "./app.js";
 window.onload = getDataCatalog();
 let base = JSON.parse(sessionStorage.getItem("productList"))||[];
 let catalog = `

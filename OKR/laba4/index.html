@@ -10,7 +10,7 @@
             products = JSON.stringify(products);
             sessionStorage.setItem("productList", products);
         }
-        if(sessionStorage.getItem("productList") == " "){
+        if(sessionStorage.getItem("productList") === null){
             getDataCatalog();
             window.location.reload();
         } 

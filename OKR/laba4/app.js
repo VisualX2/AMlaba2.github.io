@@ -1,5 +1,7 @@
 window.onload = getDataCatalog();
-
+if(testABInt(window.location.hash)){
+  rootDiv.innerHTML = pageDetailed(window.location.hash);
+}
 const routes = {
   '#catalog' : catalog
   

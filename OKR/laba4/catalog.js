@@ -1,4 +1,4 @@
-import "./app.js";
+import "./fetch.js";
 getDataCatalog();
 let base = JSON.parse(sessionStorage.getItem("productList"))||[];
 let catalog = `

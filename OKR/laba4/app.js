@@ -1,3 +1,4 @@
+import "./catalog.js";
 window.onload = getDataCatalog();
 
 const routes = {

@@ -9,10 +9,11 @@
             let products = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/products").then(response => response.json());
             products = JSON.stringify(products);
             sessionStorage.setItem("productList", products);
+            window.location.reload();
         }
         if(sessionStorage.getItem("productList") === null){
             getDataCatalog();
-            window.location.reload();
+            
         } 
   
   

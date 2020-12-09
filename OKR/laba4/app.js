@@ -6,9 +6,12 @@ const routes = {
 };
 
 const rootDiv = document.getElementById('root');
-rootDiv.innerHTML = routes[window.location.hash];
+
 if(testABInt(window.location.hash)){
   rootDiv.innerHTML = pageDetailed(window.location.hash);
+}
+else{
+  rootDiv.innerHTML = routes[window.location.hash];
 }
 function testABInt(string)
 {

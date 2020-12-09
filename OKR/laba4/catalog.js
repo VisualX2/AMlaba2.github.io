@@ -1,3 +1,4 @@
+window.onload = getDataCatalog();
 let base = JSON.parse(sessionStorage.getItem("productList"))||[];
 let catalog = `
 <h1>I am About Page.</h1>

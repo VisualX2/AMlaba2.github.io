@@ -4,7 +4,7 @@ const routes = {
   '#catalog' : catalog
   
 };
-getDataCatalog();
+window.onload = getDataCatalog();
 const rootDiv = document.getElementById('root');
 rootDiv.innerHTML = routes[window.location.hash];
 

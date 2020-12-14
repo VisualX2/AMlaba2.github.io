@@ -8,7 +8,7 @@ const rootDiv = document.getElementById('root');
 if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){
   rootDiv.innerHTML = pageDetailed(window.location.hash);
 }
-else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#action"){
+else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#actions"){
   rootDiv.innerHTML = pageDetailedAction(window.location.hash);
 }
 else if (window.location.hash === "#cart"){
@@ -26,7 +26,7 @@ window.onpopstate = () => {
   if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){
     rootDiv.innerHTML = pageDetailed(window.location.hash);
   }
-  else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#action"){
+  else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#actions"){
     rootDiv.innerHTML = pageDetailedAction(window.location.hash);
   }
   else if (window.location.hash === "#cart"){

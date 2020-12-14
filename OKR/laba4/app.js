@@ -23,10 +23,10 @@ function testABInt(string)
     return match ? match[0] : '';
 }
 window.onpopstate = () => {
-  if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "catalog"){
+  if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){
     rootDiv.innerHTML = pageDetailed(window.location.hash);
   }
-  else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "action"){
+  else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#action"){
     rootDiv.innerHTML = pageDetailedAction(window.location.hash);
   }
   else if (window.location.hash === "#cart"){

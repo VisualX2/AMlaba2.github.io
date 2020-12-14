@@ -30,6 +30,19 @@ function pageDetailed(lel){
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];
   let needed = base[lel - 1];
   let uwu;
-  uwu += `<div style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px;"><div><img src = '` + needed.images + `' class='d-block user-select-none' style = "margin-left: 10px; min-width: 400px;"  aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'></div><div><h1>` +needed.productName + `</h1><p>`+ needed.productDescription +`</p><h4>` + needed.weight + ` гр</h4><h3>` + needed.price + ` грн</h3><button type='button' class='btn btn-danger' onclick='add_to_cart(pizza_` + needed.id +  `);'>В Корзину</button></div></div>`;
+  uwu += `<div style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px;"><div><img src = '` + needed.images + `' class='d-block user-select-none' style = "margin-left: 10px; min-width: 400px;"  aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'></div><div><h1>` +needed.productName + `</h1><p>`+ needed.productDescription +`</p><h4>` + needed.weight + ` гр</h4><h3>` + needed.price + ` грн</h3><button type='button' class='btn btn-danger' onclick='add_to_cart(` + needed.id +  `);'>В Корзину</button></div></div>`;
   return uwu;
+}
+
+function add_to_cart(id){
+  let base = []; 
+  base = JSON.parse(localStorage.getItem("cart"))||[];
+  base[id - 1] += 1;
+  localStorage.setItem("cart", base);
+  updateCartCount();
+}
+function updateCartCount(){
+  base = JSON.parse(localStorage.getItem("cart"))||[];
+  let count = base.reduce((a,b) => a+b, 0);
+  document.getElementById('cart-count').innerHTML = count;
 }

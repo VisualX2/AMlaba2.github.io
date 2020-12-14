@@ -36,7 +36,7 @@ function pageDetailed(lel){
 
 function add_to_cart(id){
   let base = []; 
-  if (localStorage.getItem("cart") !== null) {
+  if (localStorage.getItem("cart") != null) {
     base = JSON.parse(localStorage.getItem("cart"))||[];
   }
   

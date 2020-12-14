@@ -1,11 +1,12 @@
 
-let cart = `
-<div class="card border-primary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Header</div>
-  <div class="order-display__order">
-`
+let cart = build_cart();
 
 function build_cart(){
+    let cart = `
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header">Header</div>
+      <div class="order-display__order">
+    `
     let base = JSON.parse(sessionStorage.getItem("productList"))||[];
     let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
     let currentArray = [];
@@ -34,7 +35,8 @@ function build_cart(){
             </div>
         </div>`;
         }
-        
+        cart += `</div>`
 
     });
+    return cart;
 }

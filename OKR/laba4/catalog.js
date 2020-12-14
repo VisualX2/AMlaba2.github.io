@@ -1,6 +1,6 @@
 let base = JSON.parse(sessionStorage.getItem("productList"))||[];
 let catalog = `
-<h1>I am About Page.</h1>
+<h1>Product Catalog.</h1>
 <div class = "jumbotron">
 <h1>Basic pizza</h1>
 <div id = "first_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">

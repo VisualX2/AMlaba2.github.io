@@ -1,6 +1,6 @@
 const routes = {
-  '#catalog' : catalog
-  
+  '#catalog' : catalog,
+  '#cart' : cart
 };
 
 const rootDiv = document.getElementById('root');

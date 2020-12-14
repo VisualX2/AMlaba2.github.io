@@ -31,7 +31,7 @@
 }
 .order__main-info {
     display: grid;
-    grid-template: 1fr/0.3fr 1fr;
+    grid-template: 0.5fr 1fr;
     grid-gap: 40px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }

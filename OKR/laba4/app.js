@@ -96,7 +96,7 @@ function build_cart(){
               <div class="order__amount-plus"onclick = "increase(`+ element.id +`)">+</div>
               </div>
           </div>
-      </div>`;
+      </div></div>`;
       }
       
       

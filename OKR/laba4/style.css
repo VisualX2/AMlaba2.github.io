@@ -18,6 +18,21 @@
     background-color: #666666;
     
 }
+.actions_main__element {
+    border-top: 2px solid #e5e5e5;
+    padding: 50px 300px 60px 300px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    grid-gap: 50px;
+    font-family: Roboto;
+    margin-bottom: 40px;
+}
+.action_logo {
+    width: 100%;
+    padding: 0 0 60% 0;
+    position: relative;
+}
 .cart {
     display: grid;
     grid-template: 1fr/auto 1fr;

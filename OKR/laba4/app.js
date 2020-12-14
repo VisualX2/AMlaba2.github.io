@@ -99,7 +99,42 @@ function build_cart(){
       </div>`;
       }
       cart += `</div>`
+      cart += `<div><form class="order__registration-blank">
+      <h2>Оформление заказа</h2>
+      <div class="blank__contacts">
 
+          <div class="blank__contacts-raw-columns">
+          <input type="text" class="form-control" id="name" placeholder="Имя" required="" pattern="([A-Za-z]|[А-Яа-я]|[ ]){2,20}">
+          <input type="text" class="form-control" id="number" placeholder="Телефон (пр. 0933477730)" required="" pattern="[0]{1}[0-9]{9}">
+          <input type="text" class="form-control" id="email" placeholder="E-mail (example@gmail.com)" required="" pattern="([A-Za-z]|[0-9]){4,20}[@]{1}[a-z]{3,10}[.]{1}[a-z]{2,5}">
+          </div>
+      </div>
+      <div class="blank__addresses">
+
+          <div class="blank__addresses-raw-columns">
+          <input type="text" class="form-control" id="city" placeholder="Город" required="" pattern="([A-Za-z]|[А-Яа-я]|[А-Яа-а]|[ ]){4,20}">
+          <input type="text" class="form-control" id="street" placeholder="Улица" required="" pattern="([A-Za-z]|[А-Яа-я]|[1-9]|[ ]){4,20}">
+          <input type="text" class="form-control" id="house" placeholder="Дом" required="" pattern="[1-9]{1,3}">
+          <input type="text" class="form-control" id="flat" placeholder="Квартира (необяз.)" pattern="[1-9]{1,4}">
+              <input type="text" class="form-control" id="entrance" placeholder="Подъезд (необяз.)" pattern="[1-9]{1,2}">
+          </div>
+      </div>
+      <div class="blank__date-time">
+          <div class="blank__date-time-raw-columns">
+              <input type="text" class="form-control" id="date" placeholder="Дата (дд.мм)" required="" pattern="[0-9]{2}[.]{1}[0-9]{2}">
+              <input type="text" class="form-control" id="time" placeholder="Время (чч:мм)" required="" pattern="[0-9]{2}[:]{1}[0-9]{2}">
+          </div>
+      </div>
+      <div class="_payment">
+          <h2 class="pay-title">Оплата</h2>
+          <select class="custom-select">
+          <option>Наличные</option>
+          <option>Карта</option>
+          </select>
+      </div>
+      <div ><button type="submit" class="btn btn-danger">Заказать</button></div>
+
+  </form></div></div>`
   });
   return cart;
 }

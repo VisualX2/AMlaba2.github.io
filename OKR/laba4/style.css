@@ -33,6 +33,7 @@
 .order__logo {
     position: relative;
     padding: 0 0 30% 0;
+    width: 50px;
 }
 .order__description {
     display: grid;

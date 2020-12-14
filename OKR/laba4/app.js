@@ -65,7 +65,7 @@ function updateCartCount(){
 }
 function build_cart(){
   let cart = `
-  <div class="card border-primary mb-3" style="max-width: 20rem;">
+  <div class="card border-primary mb-3">
     <div class="card-header">Header</div>
     <div class="order-display__order">
   `

@@ -101,7 +101,7 @@ function build_cart(){
       
       
   });
-  cart += `<div><form class="order__registration-blank">
+  cart += `</div></div><div><form class="order__registration-blank">
       <h2>Оформление заказа</h2>
       <div class="blank__contacts">
 

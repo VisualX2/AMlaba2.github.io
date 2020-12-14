@@ -17,6 +17,8 @@
         } 
         function load_cart()
    {
+    var elem = document.querySelector("#ttt");
+    elem.remove();
     document.location.href = '#cart'
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
@@ -26,7 +28,7 @@
       </script>
         
         <script src="catalog.js"></script>
-        <script src="cart.js"></script>
+        <script src="cart.js" id = "ttt"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>

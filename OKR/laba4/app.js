@@ -98,7 +98,7 @@ function build_cart(){
           </div>
       </div>`;
       }
-      cart += `</div>`
+      
       
   });
   cart += `<div><form class="order__registration-blank">
@@ -107,7 +107,7 @@ function build_cart(){
 
           <div class="blank__contacts-raw-columns">
           <input type="text" class="form-control" id="name" placeholder="Имя" required="" pattern="([A-Za-z]|[А-Яа-я]|[ ]){2,20}">
-          <input type="text" class="form-control" id="number" placeholder="Телефон (пр. 0933477730)" required="" pattern="[0]{1}[0-9]{9}">
+          <input type="text" class="form-control" id="number" placeholder="Телефон (пр. 0964772430)" required="" pattern="[0]{1}[0-9]{9}">
           <input type="text" class="form-control" id="email" placeholder="E-mail (example@gmail.com)" required="" pattern="([A-Za-z]|[0-9]){4,20}[@]{1}[a-z]{3,10}[.]{1}[a-z]{2,5}">
           </div>
       </div>

@@ -37,12 +37,14 @@ function pageDetailed(lel){
 function add_to_cart(id){
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];
   let arrayNum = [];
+  if (localStorage.getItem("cart") === null) {
   base.forEach(element => {
     arrayNum.push(0);
   });
-
+  }
+  else {
   
-  if (localStorage.getItem("cart") !== null) {
+  
     arrayNum = localStorage.getItem("cart")||[];
   }
   

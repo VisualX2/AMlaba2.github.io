@@ -73,7 +73,7 @@ function build_cart(){
   let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
   let currentArray = [];
   base.forEach (element => {
-      if (arrayNum[element.id - 1] !== "0"){
+      if (arrayNum[element.id - 1] !== 0){
           currentArray = base[arrayNum.indexOf(element)];
           cart += `<div class=".order__main-info"><div class="order__logo"><img src="`+element.images+`" alt=""></div>
           <div class="order__description">
@@ -101,4 +101,17 @@ function build_cart(){
 
   });
   return cart;
+}
+
+function increase(id){
+  let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
+  arrayNum[id - 1] += 1;
+  const rootDiv = document.getElementById('root');
+  rootDiv.innerHTML = build_cart();
+}
+function decrease(id){
+  let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
+  arrayNum[id - 1] -= 1;
+  const rootDiv = document.getElementById('root');
+  rootDiv.innerHTML = build_cart();
 }

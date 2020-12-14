@@ -23,6 +23,11 @@
     grid-template: 1fr/auto 1fr;
     grid-gap: 40px;
 }
+.form_cart{
+    display: grid;
+    grid-template: 1fr;
+    grid-gap: 40px;
+}
 @media (max-width: 600px){
     
     .cart{

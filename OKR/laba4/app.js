@@ -65,6 +65,7 @@ function updateCartCount(){
 }
 function build_cart(){
   let cart = `
+  <div class="cart">
   <div class="card border-primary mb-3">
     <div class="card-header">Header</div>
     <div class="order-display__order">
@@ -75,7 +76,7 @@ function build_cart(){
   base.forEach (element => {
       if (arrayNum[element.id - 1] !== 0){
           currentArray = base[arrayNum.indexOf(element)];
-          cart += `<div class="order__main-info"><div class="order__logo"><img src="`+element.images+`" width="50px" alt=""></div>
+          cart += `<div class="order__main-info"><div class="order__logo"><img src="`+element.images+`" width="150px" alt=""></div>
           <div class="order__description">
           <div class="order__information">
           

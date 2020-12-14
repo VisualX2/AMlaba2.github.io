@@ -18,6 +18,11 @@
     background-color: #666666;
     
 }
+.cart {
+    display: grid;
+    grid-template: 1fr/0.3fr 1fr;
+    grid-gap: 40px;
+}
 .order-display__order {
     display: grid;
     padding: 0;

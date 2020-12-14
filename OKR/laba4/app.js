@@ -35,12 +35,18 @@ function pageDetailed(lel){
 }
 
 function add_to_cart(id){
-  let base = []; 
+  let base = JSON.parse(sessionStorage.getItem("productList"))||[];
+  let arrayNum = [];
+  base.forEach(element => {
+    arrayNum.push(0);
+  });
+
+  
   if (localStorage.getItem("cart") != null) {
-    base = JSON.parse(localStorage.getItem("cart"))||[];
+    arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
   }
   
-  base[id - 1] += 1;
+  arrayNum[id - 1] += 1;
   localStorage.setItem("cart", base);
   updateCartCount();
 }

@@ -75,7 +75,7 @@ function build_cart(){
   base.forEach (element => {
       if (arrayNum[element.id - 1] !== 0){
           currentArray = base[arrayNum.indexOf(element)];
-          cart += `<div class=".order__main-info"><div class="order__logo"><img src="`+element.images+`" alt=""></div>
+          cart += `<div class="order__main-info"><div class="order__logo"><img src="`+element.images+`" alt=""></div>
           <div class="order__description">
           <div class="order__information">
           

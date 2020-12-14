@@ -51,7 +51,7 @@ function add_to_cart(id){
   updateCartCount();
 }
 function updateCartCount(){
-  base = JSON.parse(localStorage.getItem("cart"))||[];
+  base = localStorage.getItem("cart")||[];
   let count = base.reduce((a,b) => a+b, 0);
   document.getElementById('cart-count').innerHTML = count;
 }

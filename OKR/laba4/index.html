@@ -14,10 +14,21 @@
             sessionStorage.setItem("actionList", actions);
             window.location.reload();
         }
+        async function getDataCatalog_WR() {
+            let products = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/products").then(response => response.json());
+            products = JSON.stringify(products);
+            sessionStorage.setItem("productList", products);
+            let actions = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/actions").then(response => response.json());
+            actions = JSON.stringify(actions);
+            sessionStorage.setItem("actionList", actions);
+        }
         if(sessionStorage.getItem("productList") === null || sessionStorage.getItem("actionList") === null ){
             getDataCatalog();
             
         } 
+        else{
+          getDataCatalog_WR();
+        }
         
         function load_cart()
         {

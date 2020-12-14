@@ -1,10 +1,10 @@
-let base = JSON.parse(sessionStorage.getItem("actionList"))||[];
+let baseact = JSON.parse(sessionStorage.getItem("actionList"))||[];
 let catalog = `
 <h1>Actions.</h1>
 <div class = "jumbotron">
 `
 
-    base.forEach (element => {
+    baseact.forEach (element => {
         catalog += `
         <div id = "action" class = "actions_main__element">
         <div class="actions_logo"><img src="`+element.images+`" alt=""></div>

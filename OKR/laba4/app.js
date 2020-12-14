@@ -106,12 +106,17 @@ function build_cart(){
 function increase(id){
   let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
   arrayNum[id - 1] += 1;
+  localStorage.setItem("cart", JSON.stringify(arrayNum));
+  updateCartCount();
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = build_cart();
+  
 }
 function decrease(id){
   let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
   arrayNum[id - 1] -= 1;
+  localStorage.setItem("cart", JSON.stringify(arrayNum));
+  updateCartCount();
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = build_cart();
 }

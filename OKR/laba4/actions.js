@@ -13,7 +13,7 @@ let actions = `
                     <p><em>`+element.actionName+`</em></p>
                     <p>`+element.actionDescription+`</p>
                     
-                    <button type="submit" class="btn btn-danger">Детали</button>
+                    <button type="submit" class="btn btn-danger" onclick="return location.href = '#actions/`+ element.id +`'">Детали</button>
                         
                     
                 </div>

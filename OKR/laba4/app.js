@@ -42,7 +42,7 @@ function add_to_cart(id){
   });
 
   
-  if (localStorage.getItem("cart") != null) {
+  if (localStorage.getItem("cart") !== null) {
     arrayNum = localStorage.getItem("cart")||[];
   }
   

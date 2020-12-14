@@ -43,7 +43,7 @@ function add_to_cart(id){
 
   
   if (localStorage.getItem("cart") != null) {
-    arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
+    arrayNum = localStorage.getItem("cart")||[];
   }
   
   arrayNum[id - 1] += 1;

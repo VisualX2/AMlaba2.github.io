@@ -5,8 +5,11 @@ const routes = {
 
 const rootDiv = document.getElementById('root');
 
-if(testABInt(window.location.hash)){
+if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "catalog"){
   rootDiv.innerHTML = pageDetailed(window.location.hash);
+}
+else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "action"){
+  rootDiv.innerHTML = pageDetailedAction(window.location.hash);
 }
 else if (window.location.hash === "#cart"){
   rootDiv.innerHTML = build_cart();
@@ -20,8 +23,11 @@ function testABInt(string)
     return match ? match[0] : '';
 }
 window.onpopstate = () => {
-  if(testABInt(window.location.hash)){
+  if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "catalog"){
     rootDiv.innerHTML = pageDetailed(window.location.hash);
+  }
+  else if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "action"){
+    rootDiv.innerHTML = pageDetailedAction(window.location.hash);
   }
   else if (window.location.hash === "#cart"){
     rootDiv.innerHTML = build_cart();
@@ -37,6 +43,14 @@ function pageDetailed(lel){
   let needed = base[lel - 1];
   let uwu;
   uwu += `<div style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px;"><div><img src = '` + needed.images + `' class='d-block user-select-none' style = "margin-left: 10px; min-width: 400px;"  aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'></div><div><h1>` +needed.productName + `</h1><p>`+ needed.productDescription +`</p><h4>` + needed.weight + ` гр</h4><h3>` + needed.price + ` грн</h3><button type='button' class='btn btn-danger' onclick='add_to_cart(` + needed.id +  `);'>В Корзину</button></div></div>`;
+  return uwu;
+}
+function pageDetailedAction(lel){
+  lel = lel.replace(/\D/g,'');
+  let base = JSON.parse(sessionStorage.getItem("actionList"))||[];
+  let needed = base[lel - 1];
+  let uwu;
+  uwu += `<div style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px;"><div><img src = '` + needed.images + `' class='d-block user-select-none' style = "margin-left: 10px; min-width: 400px;"  aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'></div><div><h1>` +needed.actionName + `</h1><p>`+ needed.actionDescription +`</p></div></div>`;
   return uwu;
 }
 

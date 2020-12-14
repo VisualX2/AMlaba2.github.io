@@ -47,7 +47,7 @@ function add_to_cart(id){
   }
   
   arrayNum[id - 1] += 1;
-  localStorage.setItem("cart", base);
+  localStorage.setItem("cart", arrayNum);
   updateCartCount();
 }
 function updateCartCount(){

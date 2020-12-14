@@ -18,7 +18,53 @@
     background-color: #666666;
     
 }
-
+.order-display__order {
+    display: grid;
+    padding: 0;
+    border-radius: 15px;
+    grid-template: 1fr/1fr;
+}
+.order__main-info {
+    display: grid;
+    grid-template: 1fr/0.3fr 1fr;
+    grid-gap: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.order__logo {
+    position: relative;
+    padding: 0 0 30% 0;
+}
+.order__description {
+    display: grid;
+    grid-template: 1fr 0.3fr/1fr;
+}
+.order__information {
+    display: grid;
+    grid-template: 1fr 0.7fr 0.1fr 0.5fr/1fr;
+    grid-gap: 10px;
+}
+.order__buy {
+    display: grid;
+    grid-template: 1fr/1fr 0.5fr;
+    align-items: center;
+}
+.order__price {
+    font-size: 16px;
+    font-weight: bold;
+}
+.order__amount-plus-minus {
+    display: grid;
+    grid-template: 1fr/1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: red;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+}
 .slider {
 	max-width: 1200px;
 

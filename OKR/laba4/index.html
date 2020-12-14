@@ -5,16 +5,20 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <script>
-          async function getDataCatalog() {
+        async function getDataCatalog() {
             let products = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/products").then(response => response.json());
             products = JSON.stringify(products);
             sessionStorage.setItem("productList", products);
+            let actions = await fetch("https://my-json-server.typicode.com/VisualX2/OKRLABA4/actions").then(response => response.json());
+            actions = JSON.stringify(actions);
+            sessionStorage.setItem("actionList", actions);
             window.location.reload();
         }
-        if(sessionStorage.getItem("productList") === null){
+        if(sessionStorage.getItem("productList") === null || sessionStorage.getItem("actionList") === null ){
             getDataCatalog();
             
         } 
+        
         function load_cart()
         {
  
@@ -46,30 +50,16 @@
                   <a class="nav-link" href="#catalog">Catalog</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Product</a>
+                  <a class="nav-link" href="#actions">Actions</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">lol</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
-                </li>
+                
+                
               </ul>
               <div class="button-cart" onclick="load_cart()">
                 <div class="button-cart-info-quantity" id = "cart-count">0</div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510"><path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306 c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7 c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408 c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"></path></svg>
               </div>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-              </form>
+              
             </div>
           </nav>
           <script>

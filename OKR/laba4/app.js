@@ -99,7 +99,9 @@ function build_cart(){
       </div>`;
       }
       cart += `</div>`
-      cart += `<div><form class="order__registration-blank">
+      
+  });
+  cart += `<div><form class="order__registration-blank">
       <h2>Оформление заказа</h2>
       <div class="blank__contacts">
 
@@ -135,7 +137,6 @@ function build_cart(){
       <div ><button type="submit" class="btn btn-danger">Заказать</button></div>
 
   </form></div></div>`
-  });
   return cart;
 }
 

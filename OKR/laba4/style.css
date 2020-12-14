@@ -23,6 +23,12 @@
     grid-template: 1fr/auto 1fr;
     grid-gap: 40px;
 }
+@media (max-width: 600px){
+    
+    .cart{
+        grid-template-columns: 1fr;
+    }
+}
 .order-display__order {
     display: grid;
     padding: 0;

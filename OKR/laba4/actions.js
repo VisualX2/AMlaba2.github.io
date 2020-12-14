@@ -1,5 +1,5 @@
 let baseact = JSON.parse(sessionStorage.getItem("actionList"))||[];
-let catalog = `
+let actions = `
 <h1>Actions.</h1>
 <div class = "jumbotron">
 `

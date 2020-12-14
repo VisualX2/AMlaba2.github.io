@@ -45,7 +45,7 @@ function add_to_cart(id){
   else {
   
   
-    arrayNum = localStorage.getItem("cart")||[];
+    arrayNum = localStorage.getItem("cart");
   }
   
   arrayNum[id - 1] += 1;
@@ -54,7 +54,7 @@ function add_to_cart(id){
 }
 function updateCartCount(){
   let base = [];
-  base = localStorage.getItem("cart")||[];
+  base = localStorage.getItem("cart");
   let count = base.reduce((a,b) => a+b, 0);
   document.getElementById('cart-count').innerHTML = count;
 }

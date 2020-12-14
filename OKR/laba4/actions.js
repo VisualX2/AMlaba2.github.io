@@ -5,7 +5,7 @@ let actions = `
 `
 
     baseact.forEach (element => {
-        catalog += `
+        actions += `
         <div id = "action" class = "actions_main__element">
         <div class="actions_logo"><img src="`+element.images+`" alt=""></div>
         <div class="actions_description">
@@ -21,6 +21,6 @@ let actions = `
         `     
     });
 
-catalog += `</div>`;
+    actions += `</div>`;
 
 

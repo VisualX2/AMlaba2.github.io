@@ -2,7 +2,7 @@ const routes = {
   '#catalog' : catalog,
   '#actions' : actions
 };
-
+updateCartCount();
 const rootDiv = document.getElementById('root');
 
 if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){

@@ -1,5 +1,5 @@
 
-let cart = build_cart();
+cart = build_cart();
 
 function build_cart(){
     let cart = `

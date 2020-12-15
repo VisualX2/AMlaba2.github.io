@@ -38,7 +38,21 @@ window.onpopstate = () => {
     rootDiv.innerHTML = routes[window.location.hash];
   }
 }
+async function setData(order){
 
+  return await fetch(`https://my-json-server.typicode.com/VisualX2/OKRLABA4/offers`,{
+      method: 'POST',
+      body: JSON.stringify(order)
+  }).then(response => {
+      if(response.ok){
+          return response.json()}
+      else{
+          window.location.hash = "error"
+      }
+  })
+  }
+
+}
 function pageDetailed(lel){
   lel = lel.replace(/\D/g,'');
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];
@@ -146,7 +160,7 @@ function build_cart(){
           <option>Карта</option>
           </select>
       </div>
-      <div ><button type="submit" class="btn btn-danger">Заказать</button></div>
+      <div ><button type="submit" class="btn btn-danger" onclick(SendOrder())>Заказать</button></div>
 
   </form></div></div>`
   return cart;
@@ -168,4 +182,21 @@ function decrease(id){
   updateCartCount();
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = build_cart();
+}
+function SendOrder(){
+  let order = {
+    cart:localStorage.getItem("cart"),
+    name:document.getElementById("name").value,
+    number:document.getElementById("number").value,
+    email:document.getElementById("email").value,
+    city:document.getElementById("city").value,
+    street:document.getElementById("street").value,
+    house:document.getElementById("house").value,
+    flat:document.getElementById("flat").value,
+    entrance:document.getElementById("entrance").value,
+    date:document.getElementById("date").value,
+    time:document.getElementById("time").value,
+    payment_select:document.getElementById("payment_select").value
+  }
+  setData(order)
 }

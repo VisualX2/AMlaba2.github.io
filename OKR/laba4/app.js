@@ -198,6 +198,6 @@ function SendOrder(){
     date:document.getElementById("date").value,
     time:document.getElementById("time").value,
     payment_select:document.getElementById("payment_select").value
-  }
-  setData(order)
+  };
+  setData(order);
 }

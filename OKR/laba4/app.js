@@ -161,7 +161,7 @@ function build_cart(){
           <option>Карта</option>
           </select>
       </div>
-      <div ><button type="submit" class="btn btn-danger" onclick(SendOrder())>Заказать</button></div>
+      <div ><button type="submit" class="btn btn-danger" onclick = "SendOrder()">Заказать</button></div>
 
   </form></div></div>`
   return cart;

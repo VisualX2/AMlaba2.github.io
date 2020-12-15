@@ -11,8 +11,7 @@ baseacma.forEach (element => {
 
     main += "<div class = 'card-body'><h5 class = 'card-title'>" + element.actionName + "</h5></div>";
     main += `<img src = '` + element.images + `' onclick="return location.href = '#actions/`+ element.id +`'" class='d-block user-select-none' width='100%' height='200' aria-label='Placeholder: Image cap' focusable='false' role='img' preserveAspectRatio='xMidYMid slice' viewBox='0 0 318 180' style='font-size:1.125rem;text-anchor:middle'>`;
-    main += "<div class = 'card-body'><p class='card-text'>" + element.productDescription + "</p></div>";
-    main += "<div class = 'card-body'><h2>" + element.price + " грн.</h2><p>" + element.weight + " г.</p><h6></div>"
+    main += "<div class = 'card-body'><p class='card-text'>" + element.actionDescription + "</p></div>";
     main += `<button type='button' class='btn btn-danger' onclick="return location.href = '#actions/`+ element.id +`'">Details</button></div>`
         
 });

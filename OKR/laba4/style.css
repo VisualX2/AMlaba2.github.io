@@ -29,7 +29,7 @@
     margin-bottom: 40px;
 }
 .action_logo {
-    width: 100%;
+    max-width: 400px;
     padding: 0 0 60% 0;
     position: relative;
 }

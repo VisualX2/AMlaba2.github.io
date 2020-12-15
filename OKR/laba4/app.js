@@ -200,4 +200,55 @@ function SendOrder(){
     payment_select:document.getElementById("payment_select").value
   };
   setData(order);
+  window.location.hash = "#order"
+  const rootDiv = document.getElementById('root');
+  rootDiv.innerHTML = orderCreated(order);
+  localStorage.clear();
+}
+
+function orderCreated(order){
+  let base = JSON.parse(sessionStorage.getItem("productList"))||[];
+  let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
+  let currentArray = [];
+  base.forEach (element => {
+      if (arrayNum[element.id - 1] !== 0){
+          currentArray = base[arrayNum.indexOf(element)];
+          cart += `<div class="order__main-info"><div class="order__logo"><img src="`+element.images+`" width="150px" alt=""></div>
+          <div class="order__description">
+          <div class="order__information">
+          
+          <h3>`+ element.productName +`</h3>
+          
+          <p>` + element.productDescription + `</p>
+          <div class="order__size">
+              Стандарт
+          </div>
+          </div>
+          <div class="order__buy" id="pizzas.5">
+              <div class="order__price">`+ element.price +`</div>
+              <div class="order__amount-plus-minus">
+              <div class="order__amount">`+arrayNum[element.id - 1]+`
+              </div>
+              </div>
+          </div>
+      </div></div>`;
+      }
+      
+      
+  });
+  cart += `</div></div><div>
+  <p>Cart:`+order.cart+`</p>
+  <p>Name:`+order.name+`</p>
+  <p>Number:`+order.number+`</p>
+  <p>Email:`+order.email+`</p>
+  <p>City:`+order.city+`</p>
+  <p>Street:`+order.street+`</p>
+  <p>House:`+order.house+`</p>
+  <p>Flat:`+order.flat+`</p>
+  <p>Entrance:`+order.entrance+`</p>
+  <p>Date:`+order.date+`</p>
+  <p>Time:`+order.time+`</p>
+  <p>Payment:`+order.payment_select+`</p>
+  </div></div>`
+  return cart;
 }

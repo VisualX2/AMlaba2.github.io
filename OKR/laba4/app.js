@@ -4,7 +4,7 @@ const routes = {
   '': main,
   '#':main
 };
-updateCartCount();
+window.onload = updateCartCount();
 const rootDiv = document.getElementById('root');
 
 if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){

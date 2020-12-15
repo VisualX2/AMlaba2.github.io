@@ -207,6 +207,12 @@ function SendOrder(){
 }
 
 function orderCreated(order){
+  let cart = `
+  <div class="cart">
+  <div class="card border-primary mb-3">
+    <div class="card-header">Header</div>
+    <div class="order-display__order">
+  `
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];
   let arrayNum = JSON.parse(localStorage.getItem("cart"))||[];
   let currentArray = [];

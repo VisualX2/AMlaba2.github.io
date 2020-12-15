@@ -32,7 +32,12 @@ window.onpopstate = () => {
     rootDiv.innerHTML = pageDetailedAction(window.location.hash);
   }
   else if (window.location.hash === "#cart"){
+    if(localStorage.getItem("cart") === null){
+      window.location.hash = "#";
+    }
+    else{
     rootDiv.innerHTML = build_cart();
+    }
   }
   else{
     rootDiv.innerHTML = routes[window.location.hash];

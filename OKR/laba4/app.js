@@ -25,6 +25,7 @@ function testABInt(string)
     return match ? match[0] : '';
 }
 window.onpopstate = () => {
+  updateCartCount();
   if(testABInt(window.location.hash) && window.location.hash.split("/")[0] === "#catalog"){
     rootDiv.innerHTML = pageDetailed(window.location.hash);
   }

@@ -45,6 +45,7 @@ async function setData(order){
       body: JSON.stringify(order)
   }).then(response => {
       if(response.ok){
+        console.log("yay")
           return response.json()}
       else{
           window.location.hash = "error"

@@ -197,7 +197,7 @@ function SendOrder(){
     entrance:document.getElementById("entrance").value,
     date:document.getElementById("date").value,
     time:document.getElementById("time").value,
-    payment_select:document.getElementById("payment_select").options[document.getElementById("payment_select").selectedIndex].text
+    payment_select:document.getElementById("custom-select").value
   };
   setData(order);
 }

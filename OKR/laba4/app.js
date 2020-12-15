@@ -186,6 +186,7 @@ function decrease(id){
 }
 function SendOrder(){
   let order = {
+    id:1,
     cart:localStorage.getItem("cart"),
     name:document.getElementById("name").value,
     number:document.getElementById("number").value,

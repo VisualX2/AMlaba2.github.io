@@ -32,8 +32,9 @@
         
         function load_cart()
         {
- 
+          if(localStorage.getItem("cart") !== null){
               document.location.href = '#cart'
+          }
         }
       </script>
         <script src="main.js"></script>

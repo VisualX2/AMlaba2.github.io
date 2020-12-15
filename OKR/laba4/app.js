@@ -243,7 +243,6 @@ function orderCreated(order){
       
   });
   cart += `</div></div><div>
-  <p>Cart:`+order.cart+`</p>
   <p>Name:`+order.name+`</p>
   <p>Number:`+order.number+`</p>
   <p>Email:`+order.email+`</p>

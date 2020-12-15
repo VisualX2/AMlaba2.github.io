@@ -7,7 +7,7 @@ let actions = `
     baseact.forEach (element => {
         actions += `
         <div id = "action" class = "actions_main__element">
-        <div class="actions_logo"><img src="`+element.images+`" alt=""></div>
+        <div class="actions_logo"><img style = "max-width: 400px;" src="`+element.images+`" alt=""></div>
         <div class="actions_description">
                     <p>`+element.date+`</p>
                     <p><em>`+element.actionName+`</em></p>

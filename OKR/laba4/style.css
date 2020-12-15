@@ -33,10 +33,7 @@
     padding: 0 0 60% 0;
     position: relative;
 }
-.actions_logo img{
-    max-width: 400px;
-    
-}
+
 .cart {
     display: grid;
     grid-template: 1fr/auto 1fr;

@@ -18,6 +18,19 @@
     background-color: #666666;
     
 }
+@media (max-width: 1300px){
+.actions_main__element {
+    padding: 50px 50px 60px 50px;
+}
+}
+@media (max-width: 1600px){
+.actions_main__element {
+    padding: 50px 100px 60px 100px;
+}
+}
+.actions_description {
+    line-height: 23px;
+}
 .actions_main__element {
     border-top: 2px solid #e5e5e5;
     padding: 50px 300px 60px 300px;

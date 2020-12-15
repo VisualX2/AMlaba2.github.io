@@ -1,6 +1,8 @@
 const routes = {
   '#catalog' : catalog,
-  '#actions' : actions
+  '#actions' : actions,
+  '': main,
+  '#':main
 };
 updateCartCount();
 const rootDiv = document.getElementById('root');

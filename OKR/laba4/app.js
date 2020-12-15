@@ -156,7 +156,7 @@ function build_cart(){
       </div>
       <div class="_payment">
           <h2 class="pay-title">Оплата</h2>
-          <select class="custom-select">
+          <select class="custom-select" id = "payment_select">
           <option>Наличные</option>
           <option>Карта</option>
           </select>
@@ -197,7 +197,7 @@ function SendOrder(){
     entrance:document.getElementById("entrance").value,
     date:document.getElementById("date").value,
     time:document.getElementById("time").value,
-    payment_select:document.getElementById("custom-select").value
+    payment_select:document.getElementById("payment_select").value
   };
   setData(order);
 }

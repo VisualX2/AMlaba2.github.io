@@ -52,7 +52,7 @@ async function setData(order){
   })
   }
 
-}
+
 function pageDetailed(lel){
   lel = lel.replace(/\D/g,'');
   let base = JSON.parse(sessionStorage.getItem("productList"))||[];

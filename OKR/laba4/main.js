@@ -4,7 +4,7 @@ let main = `
 <h1>MAIN</h1>
 <div class = "jumbotron">
 <h1>Actions</h1>
-<div id = "actions" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "actions" class = "pizzas_category">
 `
 baseacma.forEach (element => {
     main += `<div class = "card border-secondary mb-3" style = "width: 350px;">`
@@ -18,7 +18,7 @@ baseacma.forEach (element => {
 
 main += `</div>
 <h1>Best pizza</h1>
-<div id = "best_pizza" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "best_pizza" class = "pizzas_category">
 `
 build_category(basema.filter(element => element.recommended == true)||[]);
 function build_category(uwu){

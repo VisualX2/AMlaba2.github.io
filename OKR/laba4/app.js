@@ -14,30 +14,10 @@ else if (testABInt(window.location.hash) && window.location.hash.split("/")[0] =
   rootDiv.innerHTML = pageDetailedAction(window.location.hash);
 }
 else if (window.location.hash === "#cart") {
-  if (localStorage.getItem("cart") === null) {
-    window.location.hash = "#";
-  }
-  else {
-    rootDiv.innerHTML = build_cart();
-    const form = document.getElementsByTagName('form')[0];
-    form.addEventListener('submit', function (event) {
-
-
-      if (!form.checkValidity()) {
-
-        event.preventDefault();
-      }
-      else {
-        SendOrder();
-      }
-    });
-  }
-}
-else if (window.location.hash === "#actions" || window.location.hash=== "#catalog" || window.location.hash=== " " || window.location.hash=== "#") {
-  rootDiv.innerHTML = routes[window.location.hash];
+  rootDiv.innerHTML = build_cart();
 }
 else {
-  window.location.href = "#"
+  rootDiv.innerHTML = routes[window.location.hash];
 }
 function testABInt(string) {
   var match = string.match(/[0-9]$/);
@@ -71,11 +51,8 @@ window.onpopstate = () => {
       });
     }
   }
-  else if (window.location.hash === "#actions" || window.location.hash=== "#catalog" || window.location.hash=== " " || window.location.hash=== "#") {
-    rootDiv.innerHTML = routes[window.location.hash];
-  }
   else {
-    window.location.href = "#"
+    rootDiv.innerHTML = routes[window.location.hash];
   }
 }
 async function setData(order) {

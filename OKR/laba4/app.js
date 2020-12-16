@@ -191,8 +191,7 @@ function decrease(id){
   rootDiv.innerHTML = build_cart();
 }
 function SendOrder(){
-  var inpObj = document.getElementById("id1");
-  if (!inpObj.checkValidity() || || || || || || || || || ||) {
+
   let order = {
     cart:localStorage.getItem("cart"),
     name:document.getElementById("name").value,
@@ -212,7 +211,7 @@ function SendOrder(){
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = orderCreated(order);
   localStorage.clear();
-}
+
 }
 
 function orderCreated(order){

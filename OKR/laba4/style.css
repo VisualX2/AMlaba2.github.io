@@ -1,3 +1,9 @@
+html,body{
+    min-height: 100%;
+}
+footer{
+    bottom: 0;
+}
 .button-cart {
     display: block;
     width: 49px;

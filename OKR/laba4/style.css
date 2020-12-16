@@ -2,14 +2,14 @@ html,body{
     min-height: 100%;
 }
 footer{
-    background-color: #6d6f72;
+    background-color: rgb(0, 0, 0);
     bottom: 0;
 }
 .button-cart {
     display: block;
     width: 49px;
     height: 49px;
-    background-color: rgb(160, 0, 0);
+    background-color: #313131;
     border-radius: 50%;
 }
 .button-cart svg{

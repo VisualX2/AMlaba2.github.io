@@ -8,7 +8,7 @@ footer{
     position: relative;
     bottom: 0;
     background-color: black;
-    color: gray;
+    color: rgb(165, 165, 165);
 }
 footer a{
     color: rgb(54, 54, 54);
@@ -95,6 +95,10 @@ ul { list-style: none; }
     display: grid;
     grid-template: 1fr/auto 1fr;
     grid-gap: 40px;
+}
+#root {
+    padding-top:10px;
+    padding-left:10px;
 }
 .form_cart{
     display: grid;

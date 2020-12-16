@@ -38,6 +38,18 @@ window.onpopstate = () => {
     }
     else{
     rootDiv.innerHTML = build_cart();
+    const form  = document.getElementsByTagName('form')[0];
+  form.addEventListener('submit', function (event) {
+  
+
+  if(!form.checkValidity()) {
+    
+    event.preventDefault();
+  }
+  else{
+    SendOrder();
+  }
+});
     }
   }
   else{
@@ -170,18 +182,7 @@ function build_cart(){
       <div ><button type="submit" class="btn btn-danger">Заказать</button></div>
 
   </form></div></div>`
-  const form  = document.getElementsByTagName('form')[0];
-  form.addEventListener('submit', function (event) {
   
-
-  if(!form.checkValidity()) {
-    
-    event.preventDefault();
-  }
-  else{
-    SendOrder();
-  }
-});
   return cart;
 
 }

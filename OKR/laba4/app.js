@@ -142,22 +142,22 @@ function build_cart(){
   cart += `</div></div><div><form class="order__registration-blank">
       <h2>Оформление заказа</h2>
       <div class="form_cart">
-
-          <input type="text" class="form-control" id="name" placeholder="Имя" required="" pattern="([A-Za-z]|[А-Яа-я]|[ ]){2,20}">
-          <input type="text" class="form-control" id="number" placeholder="Телефон (пр. 0964772430)" required="" pattern="[0]{1}[0-9]{9}">
-          <input type="text" class="form-control" id="email" placeholder="E-mail (example@gmail.com)" required="" pattern="([A-Za-z]|[0-9]){4,20}[@]{1}[a-z]{3,10}[.]{1}[a-z]{2,5}">
+        
+          <input type="text" class="form-control" id="name" placeholder="Имя" required pattern="([A-Za-z]|[А-Яа-я]|[ ]){2,20}">
+          <input type="text" class="form-control" id="number" placeholder="Телефон (пр. 0964772430)" required pattern="[0]{1}[0-9]{9}">
+          <input type="text" class="form-control" id="email" placeholder="E-mail (example@gmail.com)" required pattern="([A-Za-z]|[0-9]){4,20}[@]{1}[a-z]{3,10}[.]{1}[a-z]{2,5}">
 
     
 
-          <input type="text" class="form-control" id="city" placeholder="Город" required="" pattern="([A-Za-z]|[А-Яа-я]|[А-Яа-а]|[ ]){4,20}">
-          <input type="text" class="form-control" id="street" placeholder="Улица" required="" pattern="([A-Za-z]|[А-Яа-я]|[1-9]|[ ]){4,20}">
-          <input type="text" class="form-control" id="house" placeholder="Дом" required="" pattern="[1-9]{1,3}">
+          <input type="text" class="form-control" id="city" placeholder="Город" required pattern="([A-Za-z]|[А-Яа-я]|[А-Яа-а]|[ ]){4,20}">
+          <input type="text" class="form-control" id="street" placeholder="Улица" required pattern="([A-Za-z]|[А-Яа-я]|[1-9]|[ ]){4,20}">
+          <input type="text" class="form-control" id="house" placeholder="Дом" required pattern="[1-9]{1,3}">
           <input type="text" class="form-control" id="flat" placeholder="Квартира (необяз.)" pattern="[1-9]{1,4}">
               <input type="text" class="form-control" id="entrance" placeholder="Подъезд (необяз.)" pattern="[1-9]{1,2}">
 
       
-              <input type="text" class="form-control" id="date" placeholder="Дата (дд.мм)" required="" pattern="[0-9]{2}[.]{1}[0-9]{2}">
-              <input type="text" class="form-control" id="time" placeholder="Время (чч:мм)" required="" pattern="[0-9]{2}[:]{1}[0-9]{2}">
+              <input type="text" class="form-control" id="date" placeholder="Дата (дд.мм)" required pattern="[0-9]{2}[.]{1}[0-9]{2}">
+              <input type="text" class="form-control" id="time" placeholder="Время (чч:мм)" required pattern="[0-9]{2}[:]{1}[0-9]{2}">
 
       </div>
       <div class="_payment">
@@ -191,6 +191,8 @@ function decrease(id){
   rootDiv.innerHTML = build_cart();
 }
 function SendOrder(){
+  var inpObj = document.getElementById("id1");
+  if (!inpObj.checkValidity() || || || || || || || || || ||) {
   let order = {
     cart:localStorage.getItem("cart"),
     name:document.getElementById("name").value,
@@ -210,6 +212,7 @@ function SendOrder(){
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = orderCreated(order);
   localStorage.clear();
+}
 }
 
 function orderCreated(order){

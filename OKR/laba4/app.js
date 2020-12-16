@@ -167,7 +167,7 @@ function build_cart(){
           <option>Карта</option>
           </select>
       </div>
-      <div ><button type="submit" class="btn btn-danger" onclick = "SendOrder()">Заказать</button></div>
+      <div ><button type="submit" class="btn btn-danger">Заказать</button></div>
 
   </form></div></div>`
   return cart;
@@ -190,8 +190,19 @@ function decrease(id){
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = build_cart();
 }
-function SendOrder(){
+const form  = document.getElementsByTagName('form')[0];
+form.addEventListener('submit', function (event) {
+  
 
+  if(!form.checkValidity()) {
+    
+    event.preventDefault();
+  }
+  else{
+    SendOrder();
+  }
+});
+function SendOrder(){
   let order = {
     cart:localStorage.getItem("cart"),
     name:document.getElementById("name").value,

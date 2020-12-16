@@ -3,7 +3,7 @@ let catalog = `
 <h1>Product Catalog.</h1>
 <div class = "jumbotron">
 <h1>Basic pizza</h1>
-<div id = "first_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "first_category" class = "pizzas_category"">
 `
 build_category(base.filter(element => element.categoryId ==1)||[]);
 function build_category(uwu){
@@ -25,16 +25,16 @@ catalog += `</div>
 build_category(base.filter(element => element.categoryId ==2)||[]);
 catalog += `</div>
 <h1>Delux pizza</h1>
-<div id = "third_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "third_category" class = "pizzas_category">
 `
 build_category(base.filter(element => element.categoryId ==3)||[]);
 catalog += `</div>
 <h1>Snacks</h1>
-<div id = "fourth_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "fourth_category" class = "pizzas_category">
 `
 build_category(base.filter(element => element.categoryId ==4)||[]);
 catalog += `</div>
 <h1>Drinks</h1>
-<div id = "fifth_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "fifth_category" class = "pizzas_category">
 `
 build_category(base.filter(element => element.categoryId ==5)||[]);

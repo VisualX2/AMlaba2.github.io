@@ -15,7 +15,7 @@ footer a{
     text-decoration: none;
 }
 .wrapper {
-    height: auto;
+    height: 100%;
     width: 100%;
     display: grid;
     grid-template: 0.01fr 1fr 0.01fr/ 1fr;

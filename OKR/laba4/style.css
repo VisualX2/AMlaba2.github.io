@@ -6,6 +6,7 @@ body {
     min-height: 850px;
 }
 footer{
+    position: relative;
     bottom: 0;
     
 }

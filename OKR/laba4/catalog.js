@@ -20,7 +20,7 @@ function build_category(uwu){
 }
 catalog += `</div>
 <h1>Classic pizza</h1>
-<div id = "second_category" style = "display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px;">
+<div id = "second_category" class = "pizzas_category">
 `
 build_category(base.filter(element => element.categoryId ==2)||[]);
 catalog += `</div>

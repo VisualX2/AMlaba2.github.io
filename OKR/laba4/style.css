@@ -47,10 +47,19 @@ footer a{
     font-family: Roboto;
     margin-bottom: 40px;
 }
+.pizzas_category {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-column-gap: 10px;
+}
 @media (max-width: 1300px){
     .actions_main__element {
         padding: 50px 50px 60px 50px;
     }
+    @media (max-width: 1400px){
+        .pizzas_category {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
     @media (max-width: 1600px){
     .actions_main__element {

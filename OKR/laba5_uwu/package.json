@@ -1,0 +1,40 @@
+{
+  "name": "laba5",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack serve",
+    "dist": "webpack",
+    "lint": "eslint scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VisualX2/VisualX2.github.io/tree/master/OKR/laba5/index.html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VisualX2/VisualX2.github.io/tree/master/OKR/laba5/index.html/issues"
+  },
+  "browserslist": [
+    "> 0.25%, not dead"
+  ],
+  "homepage": "https://github.com/VisualX2/VisualX2.github.io/tree/master/OKR/laba5/index.html#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "copy-webpack-plugin": "^6.3.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.15.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
+}
